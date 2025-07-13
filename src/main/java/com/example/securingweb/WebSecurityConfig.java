@@ -22,8 +22,9 @@ public class WebSecurityConfig {
 				.anyRequest().authenticated()
 			)
 			.formLogin((form) -> form
-				.loginPage("/login")
-				.permitAll()
+			   .loginPage("/login")
+			   .defaultSuccessUrl("C:\\Users\\MELİH\\Desktop\\Programing HMW\\Java\\SpringBootApp\\src\\main\\resources\\templates\\home.html", true)
+			   .permitAll()
 			)
 			.logout((logout) -> logout.permitAll());
 
